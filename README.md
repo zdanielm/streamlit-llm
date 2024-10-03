@@ -43,11 +43,13 @@ mkdir -p .streamlit && touch .streamlit/secrets.toml`
 ```
 
 #### Then write your API key inside like this:
+
+> [!WARNING]
+> Make sure to replace YOUR_API_KEY with your actual key (while keeping the double quotes)!
+
 ```toml
 OPENAI_API_KEY = "YOUR_API_KEY"
 ```
-> [!WARNING]
-> Make sure to replace YOUR_API_KEY with your actual key (while keeping the double quotes)!
 
 ### 5. Run app
 
