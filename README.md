@@ -5,6 +5,7 @@
 
 ## Requirements:
 - Python 3 (used 3.12.2 for development) with pip
+- OpenAI API with GPT-4o Access (Can be set to other model in the code)
 
 ## Setup (using pip):
 

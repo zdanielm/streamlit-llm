@@ -15,7 +15,7 @@ client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Set a default model
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-3.5-turbo"
+    st.session_state["openai_model"] = "gpt-4o"
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -60,7 +60,7 @@ if uploaded_pdf is not None:
         # Include PDF content as context in the assistant's response
         with st.chat_message("assistant"):
             messages = [
-                {"role": "system", "content": f"A felhasználó feltöltött egy PDF-et. Itt van az első 10 oldalból kinyert szöveg:\n\n{st.session_state['pdf_text']}"},
+                {"role": "system", "content": f"A felhasználó feltöltött egy PDF-et. Itt van az első 10 oldalból kinyert szöveg:\n\n{st.session_state['pdf_text']}\n\nHa olyat kérdez, ami nincs benne improvizálj, használd a saját tudásod, ha tudsz netet is!"},
                 *[
                     {"role": m["role"], "content": m["content"]}
                     for m in st.session_state.messages
