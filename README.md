@@ -40,15 +40,17 @@ pip install streamlit openai PyPDF2
 
 #### You need to create a `.streamlit` folder with a `secrets.toml` file! </br>Linux example:
 ```bash
-mkdir -p .streamlit && touch .streamlit/secrets.toml`
+mkdir -p .streamlit && touch .streamlit/secrets.toml
 ```
 
 #### Then write your API key inside like this:
+
+> [!WARNING]
+> Make sure to replace YOUR_API_KEY with your actual key (while keeping the double quotes)!
+
 ```toml
 OPENAI_API_KEY = "YOUR_API_KEY"
 ```
-> [!WARNING]
-> Make sure to replace YOUR_API_KEY to your actual key (while keeping the double quotes)!
 
 ### 5. Run app
 
